@@ -65,7 +65,7 @@ const App = () => {
       symbol: "7",
       color: null,
       handleClick: addToText,
-      isLarge: true,
+      isLarge: false,
     },
     {
       symbol: "8",
@@ -92,7 +92,7 @@ const App = () => {
       symbol: "4",
       color: null,
       handleClick: addToText,
-      isLarge: true,
+      isLarge: false,
     },
     {
       symbol: "5",
@@ -119,7 +119,7 @@ const App = () => {
       symbol: "1",
       color: null,
       handleClick: addToText,
-      isLarge: true,
+      isLarge: false,
     },
     {
       symbol: "2",
