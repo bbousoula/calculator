@@ -29,6 +29,7 @@ const App = () => {
 
   const resetInput = () => {
     setText("");
+
     setResult("");
   };
 
