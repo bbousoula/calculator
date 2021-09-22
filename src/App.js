@@ -1,10 +1,10 @@
 import React, { useState } from "react";
 
-import * as math from "mathjs";
+//import * as math from "mathjs";
 
 import "./App.css";
-import Button from "./components/Button/Button";
 import Display from "./components/Display";
+import Row from "./components/Row";
 
 const App = () => {
   const [text, setText] = useState("");
@@ -166,61 +166,11 @@ const App = () => {
     <div className="container">
       <div className="wrapper">
         <Display text={text} result={result} />
-        <div className="row">
-          {row_one.map((el) => (
-            <Button
-              key={el.symbol}
-              symbol={el.symbol}
-              handleClick={el.handleClick}
-              isLarge={el.isLarge}
-              color={el.color}
-            />
-          ))}
-        </div>
-        <div className="row">
-          {row_two.map((el) => (
-            <Button
-              key={el.symbol}
-              symbol={el.symbol}
-              handleClick={el.handleClick}
-              isLarge={el.isLarge}
-              color={el.color}
-            />
-          ))}
-        </div>
-        <div className="row">
-          {row_three.map((el) => (
-            <Button
-              key={el.symbol}
-              symbol={el.symbol}
-              handleClick={el.handleClick}
-              isLarge={el.isLarge}
-              color={el.color}
-            />
-          ))}
-        </div>
-        <div className="row">
-          {row_four.map((el) => (
-            <Button
-              key={el.symbol}
-              symbol={el.symbol}
-              handleClick={el.handleClick}
-              isLarge={el.isLarge}
-              color={el.color}
-            />
-          ))}
-        </div>
-        <div className="row">
-          {row_five.map((el) => (
-            <Button
-              key={el.symbol}
-              symbol={el.symbol}
-              handleClick={el.handleClick}
-              isLarge={el.isLarge}
-              color={el.color}
-            />
-          ))}
-        </div>
+        <Row items={row_one} />
+        <Row items={row_two} />
+        <Row items={row_three} />
+        <Row items={row_four} />
+        <Row items={row_five} />
       </div>
     </div>
   );

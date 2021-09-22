@@ -18,6 +18,7 @@ body {
   justify-content: center;
   align-items: center;
   color: #fff;
+  height: 100vh;
 }
 .wrapper {
   background-color: #000;
