@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 
+import * as math from "mathjs";
+
 import "./App.css";
 import Button from "./components/Button/Button";
 import Display from "./components/Display";
@@ -12,15 +14,20 @@ const App = () => {
     setText((text) => [...text, val + " "]);
   };
 
+  const calculateResult = () => {
+    const input = text.join(""); //Remove commas
+    setResult(math.evaluate(input));
+  };
+
   const resetInput = () => {
     setText("");
     setResult("");
   };
 
-  const calculateResult = () => {
-    const input = text.join(""); //Remove commas
-    setResult(eval(input));
+  const backspace = () => {
+    setText(text.slice(0, -1));
   };
+
   const buttonColor = "#f2a33c";
   return (
     <div className="container">
@@ -50,7 +57,10 @@ const App = () => {
           <Button symbol="=" handleClick={calculateResult} />
           <Button symbol="-" color={buttonColor} handleClick={addToText} />
         </div>
-        <Button symbol="Clear" handleClick={resetInput} />
+        <div className="row">
+          <Button symbol="Clear" handleClick={resetInput} />
+          <Button symbol="C" handleClick={backspace} />
+        </div>
       </div>
     </div>
   );
