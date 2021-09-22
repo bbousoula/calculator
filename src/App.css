@@ -6,3 +6,24 @@
   -webkit-user-drag: none;
   -webkit-app-region: none;
 }
+
+body {
+  background-color: burlywood;
+  /* font-family: "Roboto, sans-serif"; */
+  height: 100vh;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+}
+.wrapper {
+  background-color: #000;
+  width: 400px;
+  border-radius: 16px;
+}
+.row {
+  display: flex;
+}
